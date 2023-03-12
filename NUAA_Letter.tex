@@ -1,0 +1,78 @@
+% !TEX TS-program = XeLaTeX
+% NUAA_Letter Template
+% Github: 
+% Authot: Julian
+% License: 
+% 1. Faculty and staff of NUAA are free to use this template.
+% 2. This project is under LPPL v1.3c license.
+% 南京航空航天大学信纸LaTeX模板（非官方）
+%%
+\PassOptionsToPackage{quiet}{fontspec}
+\documentclass[12pt,letterpaper]{letter} 
+\usepackage[fontset=fandol]{ctex}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{wallpaper}
+\usepackage{graphicx}
+\usepackage{parskip} 
+\usepackage{geometry} 
+\usepackage{fancyhdr} % for fancy headers
+\usepackage{lastpage} 
+\usepackage{indentfirst} 
+\setlength{\parindent}{2em}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+
+\fancyhead{} % footer for pages 2 on
+%\lfoot{\footnotesize {}} % 左脚注
+\cfoot{} % Change for center footer
+%\rfoot{\footnotesize \thepage\ / \pageref{LastPage}} % 右脚注：页码 
+
+\renewcommand{\footrulewidth}{0pt}
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\definecolor{nuaablue}{RGB}{29, 32, 136}
+\topmargin=-1.1in 
+\textheight=9.5in 
+\oddsidemargin=-10pt 
+\textwidth=7in % Text width
+%\let\raggedleft\raggedright % Makes the date appear on the left
+\CenterWallPaper{0.5}{nuaa_bg.pdf} %信纸背景
+\def\topnote{
+    \begin{center}
+        \begin{picture}(1000,1)
+            \put(0,-20){\includegraphics[width=.5\textwidth]{nuaa_logo.pdf}}
+            \put(300,33){\textcolor{nuaablue}{\footnotesize 地址：江苏省南京市江宁区将军大道29号} }
+            \put(300,22){\textcolor{nuaablue}{\footnotesize 邮编：211106} }
+            \put(300,11){\textcolor{nuaablue}{\footnotesize 电话：(+86) 25-84892752} }
+            \put(300,00){\textcolor{nuaablue}{\footnotesize 邮箱：\href{mailto:nuaacem@nuaa.edu.cn}{nuaacem@nuaa.edu.cn} } }
+            \put(300,-11){\textcolor{nuaablue}{ \footnotesize 主页：\href{http://cem.nuaa.edu.cn/main.htm}{http://cem.nuaa.edu.cn/main.htm} }}
+            \put(0,-28){\textcolor{nuaablue}{\rule{\textwidth}{1.2pt}}}
+        \end{picture}
+    \end{center}
+    \vspace{10mm}
+}
+
+\begin{document}
+
+\topnote %信纸抬头
+
+\noindent 尊敬的xxx：
+
+\indent 您好！
+
+欢迎使用NUAA\_Letter \LaTeX 模板！
+
+祝好，
+
+\begin{flushright}
+\begin{tabular}{rl}
+推荐人：& \raisebox{-.3\height}{\includegraphics[width=7em]{nuaa_logo.pdf}}  \\ % 电子签名
+联系方式：& \href{mailto:xxxxx@nuaa.edu.cn}{xxxx@nuaa.edu.cn} \\
+日期：& \today
+\end{tabular}
+\end{flushright}
+
+
+\end{document}
